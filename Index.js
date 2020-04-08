@@ -109828,11 +109828,12 @@ reason_react_src_ReactDOMRe_js__WEBPACK_IMPORTED_MODULE_1__["renderToElementWith
 /*!***************************!*\
   !*** ./src/MyTheme.bs.js ***!
   \***************************/
-/*! exports provided: theme */
+/*! exports provided: unit, theme */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unit", function() { return unit; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
 /* harmony import */ var bs_platform_lib_es6_caml_option_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bs-platform/lib/es6/caml_option.js */ "./node_modules/bs-platform/lib/es6/caml_option.js");
 /* harmony import */ var _jsiebern_bs_material_ui_src_MaterialUi_ThemeOptions_bs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @jsiebern/bs-material-ui/src/MaterialUi_ThemeOptions.bs.js */ "./node_modules/@jsiebern/bs-material-ui/src/MaterialUi_ThemeOptions.bs.js");
@@ -109844,6 +109845,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var theme = _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["createMuiTheme"](_jsiebern_bs_material_ui_src_MaterialUi_ThemeOptions_bs_js__WEBPACK_IMPORTED_MODULE_1__["make"](undefined, undefined, undefined, undefined, bs_platform_lib_es6_caml_option_js__WEBPACK_IMPORTED_MODULE_0__["some"](_jsiebern_bs_material_ui_src_MaterialUi_ThemeOptions_bs_js__WEBPACK_IMPORTED_MODULE_1__["PaletteOptions"].make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, bs_platform_lib_es6_caml_option_js__WEBPACK_IMPORTED_MODULE_0__["some"](_jsiebern_bs_material_ui_src_MaterialUi_ThemeOptions_bs_js__WEBPACK_IMPORTED_MODULE_1__["Primary"].make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, "#00701a", "#76d275", "#ff3d00", /* () */0)), bs_platform_lib_es6_caml_option_js__WEBPACK_IMPORTED_MODULE_0__["some"](_jsiebern_bs_material_ui_src_MaterialUi_ThemeOptions_bs_js__WEBPACK_IMPORTED_MODULE_1__["Secondary"].make(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, "#ba000d", "#ff7961", "#f44336", /* () */0)), undefined, undefined, undefined, undefined, undefined, /* () */0)), undefined, undefined, undefined, undefined, undefined, undefined, undefined, /* () */0));
+
+var unit = /* () */0;
 
 
 /* theme Not a pure module */
