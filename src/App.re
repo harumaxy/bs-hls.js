@@ -1,32 +1,40 @@
-type hls = {
-  .
-  [@bs.meth] "loadSource": string => unit,
-  [@bs.meth] "attachMedia": Dom.element => unit,
-};
-[@bs.module] [@bs.new] external createHls: unit => hls = "hls.js";
-[@bs.module "hls.js"] [@bs.val]
-external isSupported: unit => bool = "isSupported";
+open MaterialUi;
 
-let hls = createHls();
-let src = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
-
-// short hand
-let s = React.string;
+MaterialUi_Container.make;
 
 [@react.component]
 let make = () => {
-  <>
-    <h1> {s("This is ReasonReact hls.js Player")} </h1>
-    <video
-      ref={ReactDOMRe.Ref.callbackDomRef(videoRef => {
-        hls##loadSource(src);
-        switch (Js.Nullable.toOption(videoRef)) {
-        | Some(video) =>
-          hls##attachMedia(video);
-          ReactDOMRe.domElementToObj(video)##play();
-        | None => ()
-        };
-      })}
-    />
-  </>;
+  let url = ReasonReactRouter.useUrl();
+  <div id="root">
+    <AppBar>
+      <Toolbar>
+        <IconButton
+          onClick={e => Js.log("hellos")} disabled=false color=`Inherit>
+          <MscharleyBsMaterialUiIcons.Menu.Filled fontSize=`Large />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+    <Grid container=true justify=`Center alignItems=`Center>
+      <Grid item=true xs=V2>
+        <Container>
+          <h2 id="sidebar"> {React.string({js|左サイド|js})} </h2>
+        </Container>
+      </Grid>
+      <Grid item=true xs=V8>
+        <Container>
+          {switch (url.path) {
+           | ["login"] => <Login />
+           | ["player"] => <Player />
+           | ["signup"] => <Signup />
+           | _ => <h1> {React.string("404 Not found")} </h1>
+           }}
+        </Container>
+      </Grid>
+      <Grid item=true xs=V2>
+        <Container>
+          <h2 id="sidebar"> {React.string({js|右サイド|js})} </h2>
+        </Container>
+      </Grid>
+    </Grid>
+  </div>;
 };

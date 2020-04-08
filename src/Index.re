@@ -1,3 +1,3 @@
-[%bs.raw {|require("./index.css")|}];
+[%bs.raw {|require("./sass/layout.scss")|}];
 
 ReactDOMRe.renderToElementWithId(<App />, "root");
